@@ -45,7 +45,12 @@ class influxdb (
   $graphite_enable                    = $influxdb::params::graphite_enable,
   $graphite_database                  = $influxdb::params::graphite_database,
   $graphite_listen                    = $influxdb::params::graphite_listen,
-  $graphite_templates                 = $influxdb::params::graphite_templates
+  $graphite_templates                 = $influxdb::params::graphite_templates,
+
+  $collectd_enable                    = $influxdb::params::collectd_enable,
+  $collectd_bind_address              = $influxdb::params::collectd_bind_address,
+  $collectd_database                  = $influxdb::params::collectd_database,
+  $collectd_typesdb                   = $influxdb::params::collectd_typesdb,
 
 ) inherits influxdb::params {
   case $split_client_package {

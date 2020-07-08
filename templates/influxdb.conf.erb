@@ -363,14 +363,14 @@ hostname = "<%= @hostname %>"
 ###
 
 [[collectd]]
-  # enabled = <%= @collectd_enable %>
-  # bind-address = "<%= @collectd_bind_address %>"
-  # database = "collectd"
+  enabled = <%= @collectd_enable %>
+  bind-address = "<%= @collectd_bind_address %>"
+  database = "<%= @collectd_database %>"
   # retention-policy = ""
   #
   # The collectd service supports either scanning a directory for multiple types
   # db files, or specifying a single db file.
-  # typesdb = "<%= @collectd_typesdb %>"
+  typesdb = "<%= @collectd_typesdb %>"
   #
   # security-level = "none"
   # auth-file = "/etc/collectd/auth_file"

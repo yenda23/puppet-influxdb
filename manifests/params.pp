@@ -33,6 +33,10 @@ class influxdb::params {
     '*.app env.service.resource.measurement',
     'server', # default template
   ]
+  $collectd_enable                    = false
+  $collectd_bind_address              = ':25826'
+  $collectd_database                  = 'collectd_db'
+  $collectd_typesdb                   = '/usr/share/collectd/types.db'
 
   case $::operatingsystem {
     /(?i:debian|devuan|ubuntu)/: {
